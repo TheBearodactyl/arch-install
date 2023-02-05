@@ -19,4 +19,5 @@ mkdir -p /mnt/boot/efi
 mount /dev/nvme0n1p1 /mnt/boot/efi
 pacstrap /mnt base linux linux-firmware vim nano
 genfstab -U /mnt >> /mnt/etc/fstab
+cp install2.sh /mnt/install2.sh
 arch-chroot /mnt /bin/bash
