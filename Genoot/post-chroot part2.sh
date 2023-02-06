@@ -8,8 +8,11 @@ cpuid2cpuflags
 echo "COPY THESE AND PASTE THEM, REPLACING THE : WITH = AND PUTTING QUOTES AT THE BEGGINING AND END OF THE LIST"
 sleep 10
 nano /etc/portage/make.conf
+echo "Put "ACCEPT_LICENSE="*" at the end of the file from before"
+nano /etc/portage/make.conf
 emerge -aquDN @world
 ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
 nano -w /etc/locale.gen
 locale-gen
 eselect locale list
+
