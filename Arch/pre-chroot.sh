@@ -16,6 +16,8 @@ mount /dev/mmcblk0p1 /mnt
 mkdir -p /mnt/{home,boot/efi}
 mount /dev/nvme0n1p1 /mnt/boot/efi
 mount /dev/nvme0n1p3 /mnt/home
+cp post-chroot.sh /mnt/post-chroot.sh
+chmod +x /mnt/post-chroot.sh
 pacstrap /mnt base linux linux-firmware vim nano fakeroot git
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
