@@ -7,7 +7,7 @@ mkswap /dev/nvme0n1p2
 swapon /dev/nvme0n1p2
 mkfs.ext4 /dev/nvme0n1p3
 mkfs.ext4 /dev/mmcblk0p1
-iwctl station wlan0 connect "You'll put your eye out-guest"
+iwctl station wlan0 connect "Bane of Gannon's Existance Guest"
 sleep 5
 pacman -Syy
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
@@ -16,6 +16,6 @@ mount /dev/mmcblk0p1 /mnt
 mkdir -p /mnt/{home,boot/efi}
 mount /dev/nvme0n1p1 /mnt/boot/efi
 mount /dev/nvme0n1p3 /mnt/home
-pacstrap /mnt base linux linux-firmware vim nano
+pacstrap /mnt base linux linux-firmware vim nano fakeroot git
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
