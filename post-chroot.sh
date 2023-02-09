@@ -12,7 +12,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S sudo
 useradd -m thebearodactyluwu
 passwd thebearodactyluwu
-usermod -aG wheel,audio,video,storage team
+usermod -aG wheel,audio,video,storage thebearodactyluwu
 EDITOR=nano visudo
 nano /etc/pacman.conf
 pacman -S xorg networkmanager gnome plasma plasma-wayland-session git fakeroot chromium
