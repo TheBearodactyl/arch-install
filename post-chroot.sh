@@ -18,4 +18,3 @@ nano /etc/pacman.conf
 pacman -S xorg networkmanager gnome plasma plasma-wayland-session git fakeroot chromium
 systemctl enable gdm NetworkManager
 cp post-install.sh /home/thebearodactyluwu/post-install.sh
-exit
