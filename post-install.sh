@@ -18,6 +18,5 @@ sudo systemctl enable mpd.service
 sudo systemctl start mpd.service
 git clone --depth 1 --recurse-submodules https://github.com/rxyhn/yoru.git
 cd yoru && git submodule update --remote --merge
-sudo mkdir ~/.config
 sudo cp -r config/* ~/.config/
 sudo cp -r config/* /home/thebearodactyluwu/.config/
